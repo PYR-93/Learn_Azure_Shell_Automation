@@ -1,4 +1,11 @@
 #!/bin/bash
 
-echo -e "\e[1;95m Hello World \e[0m"
+Yellow="33m"
+RED="31m"
+ENDTHECLR="\e[0m"
+echo $Yellow
+echo $ENDTHECLR
 
+echo -e "\e[1;${Yellow} Hello World ${ENDTHECLR}"
+
+echo " rest color"
