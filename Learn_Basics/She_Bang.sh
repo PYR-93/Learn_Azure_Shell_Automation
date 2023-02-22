@@ -1,4 +1,5 @@
 #!/bin/bash
 
 hostname
-ls 
+ls -ltr
+date
