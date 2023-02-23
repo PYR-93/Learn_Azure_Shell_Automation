@@ -28,3 +28,10 @@ then
 else 
     echo file doesnot exist
 fi
+
+
+# Write a programm to find if which 
+
+
+
+
