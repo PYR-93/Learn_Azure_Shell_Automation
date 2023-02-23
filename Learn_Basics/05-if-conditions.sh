@@ -20,7 +20,7 @@ else
     echo not same
 fi
 
-file="/c/Users/pyogeshwar.reddy/OneDrive-IQVIA/Desktop/Learn/Learn_Azure_Shell_Automation/Learn_Basics/ColorCoding.sh"
+file=/root/Learn_Azure_Shell_Automation/Learn_Basics/05*
 
 if [ -f $file ]
 then 
