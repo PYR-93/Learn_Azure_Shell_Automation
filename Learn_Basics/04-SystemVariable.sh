@@ -11,6 +11,8 @@ echo $@ # All Arguments
 
 echo $# # How many variable has been passed
 
+echo $!
+
 # The above arguments can be used as inputs from user 
 # Example 
 ##$ sh 04-SystemVariable.sh yogi teju mahi nani
