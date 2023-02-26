@@ -11,7 +11,9 @@ function Test(){
    Str=$(($1+$2))
    echo $Str
 }
-Test $1 $2
+a=200
+b=300
+Test $a $b
 
 
 function Swap(){
@@ -40,3 +42,17 @@ function Swap2(){
 a=200
 b=300
 Swap2 $a $b
+
+
+
+StatusCheck() {
+    if [ $1 -eq 0 ]; then
+       echo -e status="\e[32m Success \e[0m"
+    else
+        echo -e status="\e[31m Failed \e[0m"
+        exit 1
+    fi
+
+}
+Yum insta git &>> cat
+StatusCheck $?
