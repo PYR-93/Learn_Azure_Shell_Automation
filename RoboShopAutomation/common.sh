@@ -90,4 +90,6 @@ cd /home/roboshop
 cd ${Component}
 npm install &>>${Logfile}
 StatusCheck $?
+
+SYSTEMD
 }
