@@ -1,4 +1,4 @@
 Component=Cart
-Logfile=/tmp/${COMPONENT}
+Logfile=/tmp/${Component}
 source ./common.sh 
 NODEJS
