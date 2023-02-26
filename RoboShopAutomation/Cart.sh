@@ -1,1 +1,1 @@
-Logfile=/root/Learn_Azure_Shell_Automation/RoboShopAutomation/LogFiles
+Logfile=/root/Learn_Azure_Shell_Automation/RoboShopAutomation/LogFiles.txt

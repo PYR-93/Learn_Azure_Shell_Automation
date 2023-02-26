@@ -1,0 +1,2 @@
+bash: zcho: command not found
+bash: zcho: command not found
