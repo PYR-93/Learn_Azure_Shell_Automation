@@ -1,5 +1,5 @@
 ID=$(id -u)
-if [ $ID -ne 0]; then
+if [ $ID -ne 0 ]; then
     echo "----You are not running as root User this will fail"
     exit 1
 fi
@@ -18,7 +18,7 @@ APP_PREREQ() {
 
 echo "-------Checking for user if already exists..?--------------"
 id roboshop &>>${Logfile}
-if [ &? -ne 0]; then
+if [ &? -ne 0 ]; then
     echo "-------User adding----------"
     useradd roboshop &>>${Logfile}
     StatusCheck $?
