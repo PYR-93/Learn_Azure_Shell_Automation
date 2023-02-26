@@ -1,1 +1,1 @@
-COMPONENT=cart
+Logfile=/
