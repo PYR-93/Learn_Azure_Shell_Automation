@@ -1,8 +1,4 @@
 Component=Cart
-
-Logfile=/root/Learn_Azure_Shell_Automation/RoboShopAutomation/LogFiles/Logfile.sh
-
-source ./common.sh
-
-
+Logfile=/tmp/${COMPONENT}
+source ./common.sh 
 NODEJS
