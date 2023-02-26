@@ -2,7 +2,7 @@
 :'
 Color	Foreground Code	Background Code
 Black	30	40
-Red	31	41
+Red	    31	41
 Green	32	42
 Yellow	33	43
 Blue	34	44
