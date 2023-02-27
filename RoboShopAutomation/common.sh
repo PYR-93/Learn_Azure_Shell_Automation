@@ -98,3 +98,21 @@ StatusCheck $?
 
 SYSTEMD
 }
+
+Java() {
+
+    echo "---Installing Maveen for Shipping------"
+    yum install maven -y &>>${Logfile}
+    StatusCheck $?
+
+    APP_PREREQ
+
+    cd ${Component}
+    mvn clean package &>>${Logfile}
+    StatusCheck $?
+    mv target/shipping-1.0.jar shipping.jar &>>${Logfile}
+    StatusCheck $?
+
+    SYSTEMD
+
+}
