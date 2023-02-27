@@ -99,7 +99,7 @@ StatusCheck $?
 SYSTEMD
 }
 
-Java() {
+MAVEN() {
 
     echo "---Installing Maveen for Shipping------"
     yum install maven -y &>>${Logfile}
