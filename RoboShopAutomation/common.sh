@@ -134,3 +134,30 @@ PYTHON (){
 
 }
 
+GoLang() {
+
+echo "-----------Installing GoLang-----------------"
+yum install golang -y &>>${Logfile}
+StatusCheck $?
+
+
+APP_PREREQ
+
+cd /home/roboshop
+
+cd ${Component} &>>${Logfile}
+StatusCheck $?
+
+go mod init dispatch &>>${Logfile}
+StatusCheck $?
+
+go get &>>${Logfile}
+StatusCheck $?
+
+go build &>>${Logfile}
+StatusCheck $?
+
+SYSTEMD
+
+}
+
