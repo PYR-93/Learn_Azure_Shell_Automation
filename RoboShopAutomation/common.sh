@@ -59,6 +59,7 @@ StatusCheck $?
 echo "---------Moving the service file----------"
 mv /home/roboshop/${Component}/systemd.service /etc/systemd/system/${Component}.service &>>${Logfile}
 StatusCheck $?
+
 echo "----Reloading the configuration-------"
 systemctl daemon-reload &>>${Logfile}
 StatusCheck $?
