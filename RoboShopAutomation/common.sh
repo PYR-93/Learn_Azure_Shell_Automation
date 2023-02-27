@@ -37,7 +37,7 @@ StatusCheck $?
 
 
 echo "---Unzip the files------${Component}"
-unzip /tmp/${Component}.zip &>>${Logfile}
+unzip -o /tmp/${Component}.zip &>>${Logfile}
 StatusCheck $?
 
 echo "----Moving the files------"
