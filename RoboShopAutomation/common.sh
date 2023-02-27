@@ -116,3 +116,20 @@ MAVEN() {
     SYSTEMD
 
 }
+
+PYTHON (){
+    echo "-----Installing python on Payment box-------------"
+    yum install python36 gcc python3-devel -y &>>${Logfile}
+    StatusCheck $?
+
+    APP_PREREQ
+
+    cd /home/roboshop/${Component} &>>${Logfile}
+    StatusCheck $?
+    pip3 install -r requirements.txt &>>${Logfile}
+    StatusCheck $?
+
+    SYSTEMD
+
+}
+
