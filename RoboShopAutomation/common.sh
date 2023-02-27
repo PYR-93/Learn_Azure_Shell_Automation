@@ -28,15 +28,20 @@ echo "-----Download ${Component}---------------"
 curl -s -L -o /tmp/${Component}.zip "https://github.com/roboshop-devops-project/${Component}/archive/main.zip" &>>${Logfile}
 StatusCheck $?
 
+echo "stoping the service before cleanup"
+    systemctl stop ${Component}.service
+
 echo "------Remove the old content if any-------"
 cd /home/roboshop && rm -rf ${Component} &>>${Logfile}
 StatusCheck $?
+
 
 echo "---Unzip the files------${Component}"
 unzip /tmp/${Component}.zip &>>${Logfile}
 StatusCheck $?
 
 echo "----Moving the files------"
+rm -rf 
 mv ${Component}-main ${Component} &>>${Logfile}
 StatusCheck $?
 
