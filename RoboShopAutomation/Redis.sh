@@ -20,7 +20,8 @@ StatusCheck $?
 
 
 echo "----Changing the content /127.0.0.1/0.0.0.0'-------------"
-sed -i -e 's/127.0.0.1/0.0.0.0' /etc/redis.conf &>>${Logfile}
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis.conf &>>${Logfile}
+
 StatusCheck $?
 
 echo "stoping the service before cleanup"
