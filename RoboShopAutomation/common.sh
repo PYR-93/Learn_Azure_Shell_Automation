@@ -29,7 +29,7 @@ curl -s -L -o /tmp/${Component}.zip "https://github.com/roboshop-devops-project/
 StatusCheck $?
 
 echo "stoping the service before cleanup"
-    systemctl stop ${Component}.service
+systemctl stop ${Component}.service
 
 echo "------Remove the old content if any-------"
 cd /home/roboshop && rm -rf ${Component} &>>${Logfile}
