@@ -3,7 +3,7 @@ Logfile=/tmp/${Component}
 source ./common.sh
 
 echo "----Downloading Redis Repo-------------"
-dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y &>>${Logfile}
+dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y --skip-broken &>>${Logfile}
 StatusCheck $?
 
 echo "----Installing Redis Repo-------------"
