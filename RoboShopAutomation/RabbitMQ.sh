@@ -1,4 +1,4 @@
-Component=payment
+Component=rabbitmq
 Logfile=/tmp/${Component}
 source ./common.sh 
 
