@@ -35,9 +35,10 @@ StatusCheck $?
 
 echo "show databases;" | mysql -uroot -p${last_entry} &>>${Logfile}
 if [ $? -eq 0 ]; then
-echo "----Changing the password--------"
-mysql -uroot -p${last_entry} < /tmp/pass.txt &>>${Logfile}
-StatusCheck $?
+    echo "----Changing the password--------"
+    mysql -uroot -p${last_entry} < /tmp/pass.txt &>>${Logfile}
+    StatusCheck $?
+fi
 
 echo "uninstall plugin validate_password;" | mysql -uroot -p$1 &>>${Logfile}
 StatusCheck $?
