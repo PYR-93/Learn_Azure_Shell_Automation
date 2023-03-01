@@ -34,7 +34,6 @@ FLUSH PRIVILEGES;" > /tmp/pass.txt &>>${Logfile}
 StatusCheck $?
 
 echo "show databases;" | mysql -uroot -p${last_entry} &>>${Logfile}
-StatusCheck $?
 if [ $? -eq 0 ]; then
 echo "----Changing the password--------"
 mysql -uroot -p${last_entry} < /tmp/pass.txt &>>${Logfile}
