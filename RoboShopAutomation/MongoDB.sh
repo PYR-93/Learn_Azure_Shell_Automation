@@ -37,9 +37,12 @@ cd /tmp
 unzip mongodb.zip &>>${Logfile}
 StatusCheck $?
 
-cd mongodb-main
-mongo < catalogue.js
-mongo < users.js
+cd mongodb-main &>>${Logfile}
+StatusCheck $?
+mongo < catalogue.js &>>${Logfile}
+StatusCheck $?
+mongo < users.js &>>${Logfile}
+StatusCheck $?
 
 
 
