@@ -39,10 +39,11 @@ if [ $? -eq 0 ]; then
     echo "----Changing the password--------"
     mysql -uroot -p${last_entry} < /tmp/pass.txt &>>${Logfile}
     StatusCheck $?
+    echo " uninstall plugin validate_password; " | mysql -uroot -p$1 &>>${Logfile}
+    StatusCheck $?
 fi
 
-echo "uninstall plugin validate_password;" | mysql -uroot -p$1 &>>${Logfile}
-StatusCheck $?
+
 
 rm -rf /tmp/mysql.zip
 echo "Download the Zip file MYSql"
