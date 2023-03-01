@@ -25,8 +25,33 @@ StatusCheck $?
 systemctl start mysqld &>>${Logfile}
 StatusCheck $?
 
-grep root@localhost: /var/log/mysqld.log | cut -d ' ' -f 11 >> tempPass.txt
+grep root@localhost: /var/log/mysqld.log | cut -d ' ' -f 11 >> tempPass.txt 
 last_entry=$(tail -n 1 tempPass.txt)
-echo $last_entry
+# echo $last_entry
+
+echo "ALTER USER 'root'@'localhost' IDENTIFIED BY '$1';
+FLUSH PRIVILEGES;" > /tmp/pass.txt &>>${Logfile}
+StatusCheck $?
+
+echo "show databases;" | mysql -uroot -p${last_entry} &>>${Logfile}
+StatusCheck $?
+if [ $? -eq 0 ]; then
+echo "----Changing the password--------"
+mysql -uroot -p${last_entry} < /tmp/pass.txt &>>${Logfile}
+StatusCheck $?
+
+echo "uninstall plugin validate_password;" | mysql -uroot -p$1 &>>${Logfile}
+StatusCheck $?
+
+rm -rf /tmp/mysql.zip
+echo "Download the Zip file MYSql"
+curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip"
+
+
+cd /tmp
+unzip mysql.zip
+cd mysql-main
+mysql -u root -pRoboShop@1 <shipping.sql &>>${Logfile}
+StatusCheck $?
 
 
