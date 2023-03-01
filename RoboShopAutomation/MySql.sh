@@ -25,6 +25,8 @@ StatusCheck $?
 systemctl start mysqld &>>${Logfile}
 StatusCheck $?
 
-
+grep root@localhost: /var/log/mysqld.log | cut -d ' ' -f 11 >> tempPass.txt
+last_entry=$(tail -n 1 tempPass.txt)
+echo $last_entry
 
 

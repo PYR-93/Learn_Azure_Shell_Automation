@@ -1,0 +1,17 @@
+2023-02-18T19:30:23.073320Z 1 [Note] A temporary password is generated for root@localhost: yLF!7IlB5u,z
+2023-02-18T19:30:35.206991Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-02-18T23:09:25.030355Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-02-18T23:12:27.803249Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-02-18T23:40:38.876067Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-02-18T23:47:24.140519Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-02-18T23:49:51.125074Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-02-19T00:16:51.491787Z 1 [Note] A temporary password is generated for root@localhost: NgGysMt!e8pq
+2023-02-19T00:16:59.558924Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-02-19T00:34:12.669297Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-02-26T09:48:04.022994Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-02-26T14:59:12.642847Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-02-27T05:26:35.589909Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-02-27T09:08:19.449261Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-02-27T17:30:44.307653Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-02-28T15:12:57.135320Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-03-01T18:01:52.629996Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
