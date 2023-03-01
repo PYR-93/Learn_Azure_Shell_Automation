@@ -44,7 +44,7 @@ if [ $? -eq 0 ]; then
 fi
 
 
-
+echo " cleanup before installation"
 rm -rf /tmp/mysql.zip
 echo "Download the Zip file MYSql"
 curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip"
