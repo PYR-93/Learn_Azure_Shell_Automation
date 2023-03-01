@@ -7,15 +7,20 @@ curl -s -o /etc/yum.repos.d/{Component}.repo https://raw.githubusercontent.com/r
 StatusCheck $?
 
 echo "*******Install mongodg********"
-yum install -y mongodb-org
+yum install -y mongodb-org &>>${Logfile}
+StatusCheck $?
 echo "*******Enable mongodg********"
-systemctl enable mongod
+systemctl enable mongod &>>${Logfile}
+StatusCheck $?
 echo "*******Start mongodg********"
-systemctl start mongod
+systemctl start mongod &>>${Logfile}
+StatusCheck $?
 
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>${Logfile}
+StatusCheck $?
 echo "restart the service"
-systemctl restart mongod
+systemctl restart mongod &>>${Logfile}
+StatusCheck $?
 
 
 
@@ -25,7 +30,8 @@ rm -rf /tmp/mongodb-main &>>${Logfile}
 StatusCheck $?
 
 echo "Download the Zip file MongoDB"
-curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
+curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>${Logfile}
+StatusCheck $?
 
 cd /tmp
 unzip mongodb.zip &>>${Logfile}
