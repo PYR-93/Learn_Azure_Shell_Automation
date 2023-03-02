@@ -33,15 +33,15 @@ StatusCheck $?
 
 
 echo " Updating the systemD service file with DNS name"
-sed -i -e '/catalogue/ s/localhost/catalogue.roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
+sed -i -e '/catalogue/ s/localhost/catalogue.Roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
 StatusCheck $?
-sed -i -e '/user/ s/localhost/user.roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
+sed -i -e '/user/ s/localhost/user.Roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
 StatusCheck $?
-sed -i -e '/cart/ s/localhost/cart.roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
+sed -i -e '/cart/ s/localhost/cart.Roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
 StatusCheck $?
-sed -i -e '/shipping/ s/localhost/shipping.roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
+sed -i -e '/shipping/ s/localhost/shipping.Roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
 StatusCheck $?
-sed -i -e '/payment/ s/localhost/payment.roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
+sed -i -e '/payment/ s/localhost/payment.Roboshop.internal/'  /etc/nginx/default.d/roboshop.conf &>>${Logfile}
 StatusCheck $?
 
 
