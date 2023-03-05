@@ -11,7 +11,7 @@ for component in user cart catalogue payment shipping frontend mongodb redis mys
         --admin-username $username \
         --admin-password $password \
         --size Standard_B1s \
-        --public-ip-address "" \
+        --public-ip-address none \
         --vnet-name Learn_Azure_Focus-vnet \
          --subnet default \
          --nsg none
