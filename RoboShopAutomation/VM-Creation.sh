@@ -9,6 +9,7 @@ az vm create \
     --admin-username $username \
     --admin-password $password \
     --size StandardB1s \
+    --image eurolinuxspzoo1620639373013:centos-8-5-free \
     --publisher eurolinuxspzoo1620639373013 \
     --offer centos-8-5-free \
     --sku centos-8-5-free \
