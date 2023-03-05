@@ -33,8 +33,8 @@ last_entry=$(tail -n 1 tempPass.txt)
 echo "ALTER USER 'root'@'localhost' IDENTIFIED BY '$1';
 FLUSH PRIVILEGES; " > /tmp/pass.txt
 StatusCheck $?
-echo "*******Entering the validation for the default*********"
-mysql --connect-expired-password -uroot -p${last_entry} &>>${Logfile}
+echo "*******Entering the validation for the default $last_entry*********"
+echo "show databases;" | mysql --connect-expired-password -uroot -p${last_entry} &>>${Logfile}
 if [ $? -eq 0 ]; then
     echo "----Changing the password--------"
     mysql --connect-expired-password -uroot -p${last_entry} < /tmp/pass.txt &>>${Logfile}
