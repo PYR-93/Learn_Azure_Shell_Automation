@@ -9,6 +9,7 @@ az vm create \
     --admin-username $username \
     --admin-password $password \
     --size StandardB1s \
+    --public-ip-address "" \
     --image eurolinuxspzoo1620639373013:centos-8-5-free:centos-8-5-free:8.5.5 \
    
 
