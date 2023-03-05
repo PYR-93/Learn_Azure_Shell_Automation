@@ -9,7 +9,7 @@ az vm create \
     --admin-username $username \
     --admin-password $password \
     --size StandardB1s \
-    --image eurolinuxspzoo1620639373013:centos-8-5-free \
+    --image eurolinuxspzoo1620639373013:centos-8-5-free:centos-8-5-free:8.5.5  8.5.5 \
    
 
 # az vm create --resource-group azure-training-2023 --name $component --image OpenLogic:CentOS-LVM:8-lvm-gen2:8.5.2022101401 --vnet-name azure-training-2023-vnet --subnet default  --admin-username centos --admin-password DevOps654321 --public-ip-address "" --size Standard_B1s --nsg "" 
