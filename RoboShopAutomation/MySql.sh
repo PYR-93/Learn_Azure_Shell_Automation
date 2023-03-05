@@ -34,7 +34,7 @@ echo "ALTER USER 'root'@'localhost' IDENTIFIED BY '$1';
 FLUSH PRIVILEGES; " > /tmp/pass.txt
 StatusCheck $?
 echo "*******Entering the validation for the default*********"
-echo "show databases;" | mysql --connect-expired-password -uroot -p${last_entry} &>>${Logfile}
+mysql --connect-expired-password -uroot -p${last_entry} &>>${Logfile}
 if [ $? -eq 0 ]; then
     echo "----Changing the password--------"
     mysql --connect-expired-password -uroot -p${last_entry} < /tmp/pass.txt &>>${Logfile}
