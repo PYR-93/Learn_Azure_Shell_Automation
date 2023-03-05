@@ -10,6 +10,8 @@ az vm create \
     --admin-password $password \
     --size Standard_B1s \
     --public-ip-address "" \
+    --vnet-name Learn_Azure_Focus-vnet \
+    --subnet default
     
    
 
