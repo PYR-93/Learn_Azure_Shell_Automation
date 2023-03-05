@@ -10,7 +10,7 @@ az vm create \
     --admin-username $username \
     --admin-password $password \
     --image OpenLogic:CentOS:6.5:latest \
-    --size Standard B1s \
+    --size StandardB1s \
     --publisher eurolinuxspzoo1620639373013 \
     --offer centos-8-5-free \
     --sku centos-8-5-free \
