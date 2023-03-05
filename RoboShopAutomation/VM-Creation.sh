@@ -1,6 +1,6 @@
 vmname="myVM"
 resourcegroup="Learn_Azure_Focus"
-username="Centos-VM-1r"
+username="centosvm1"
 password="@BeStrong4816"
 az vm create \
     --resource-group $resourcegroup \
