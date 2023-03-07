@@ -1,4 +1,4 @@
-for component in user cart catalogue payment shipping frontend mongodb redis mysql rabbitmq dispatch; do
+for component in ImageServer; do
   vmname=$component
   resourcegroup="Learn_Azure_Focus"
   username="centosvm1"
@@ -15,3 +15,4 @@ for component in user cart catalogue payment shipping frontend mongodb redis mys
     --subnet default \
     --nsg JumpServer-MainVM-nsg
 done
+
