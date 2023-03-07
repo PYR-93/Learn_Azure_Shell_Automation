@@ -13,5 +13,5 @@ for component in user cart catalogue payment shipping frontend mongodb redis mys
     --public-ip-address "" \
     --vnet-name Learn_Azure_Focus-vnet \
     --subnet default \
-    --nsg ""
+    --nsg JumpServer-MainVM-nsg
 done
