@@ -16,3 +16,12 @@ for component in ImageServer; do
     --nsg JumpServer-MainVM-nsg
 done
 
+
+resourceGroup=Learn_Azure_Focus
+gallery=My_Image_gallary
+az sig image-definition list \
+   --resource-group $resourceGroup \
+   --gallery-name $gallery \
+   --query "[].[name, id]" \
+   --output tsv
+
