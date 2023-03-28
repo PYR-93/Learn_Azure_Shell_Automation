@@ -1,5 +1,5 @@
 COMPONENT=prep 
-LOG_FILE=/tmp/${COMPONENT}
+Logfile=/tmp/${COMPONENT}
 source ./common.sh 
 echo "disable selinux"
 sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config &>>${Logfile}

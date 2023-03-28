@@ -1,3 +1,4 @@
+component=frontend
 for component in ImageServer; do
   vmname=$component
   resourcegroup="Learn_Azure_Focus"
@@ -24,4 +25,6 @@ az sig image-definition list \
    --gallery-name $gallery \
    --query "[].[name, id]" \
    --output tsv
+
+  
 
