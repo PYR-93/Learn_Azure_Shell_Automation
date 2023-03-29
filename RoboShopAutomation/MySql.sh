@@ -35,7 +35,7 @@ FLUSH PRIVILEGES; " > /tmp/pass.txt
 StatusCheck $?
 echo "*******Entering the validation for the default $last_entry*********"
 echo "show databases;" | mysql --connect-expired-password -uroot -p${last_entry} &>>${Logfile}
-if [ $? -nq 0 ]; then
+if [ $? -ne 0 ]; then
     echo "----Changing the password--------"
     mysql --connect-expired-password -uroot -p${last_entry} < /tmp/pass.txt 
     echo " uninstall plugin validate_password; " | mysql -uroot -p$1 &>>${Logfile}

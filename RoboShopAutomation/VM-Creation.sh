@@ -51,7 +51,20 @@ done
 
 
 imgDef="/subscriptions/54d1ecf0-fc36-4e9e-9f37-3f5e0b35d6a5/resourceGroups/Learn_Azure/providers/Microsoft.Compute/galleries/Master_Gallery/images/imageDef/versions/1.0.0"
-for component in frontend user ; do
+for component in frontend mongodb catalogue redis user cart mysql shipping rabbitmq payment dispatch  ; do
+az vm create --resource-group Learn_Azure --name $component  --image $imgDef --public-ip-address "" --vnet-name Centos-vm-vnet --subnet default  --admin-username centos --admin-password DevOps654321  --storage-sku Standard_LRS  --size Standard_B1ms --nsg "" --plan-name centos-8-5-free --plan-product centos-8-5-free --plan-publisher eurolinuxspzoo1620639373013
+az vm auto-shutdown -g Learn_Azure -n  $component --time 1230  
+done
+
+
+imgDef="/subscriptions/54d1ecf0-fc36-4e9e-9f37-3f5e0b35d6a5/resourceGroups/Learn_Azure/providers/Microsoft.Compute/galleries/Master_Gallery/images/imageDef/versions/1.0.0"
+for component in JumpServer ; do
+az vm create --resource-group Learn_Azure --name $component  --image $imgDef --vnet-name Centos-vm-vnet --subnet default  --admin-username centos --admin-password DevOps654321  --storage-sku Standard_LRS  --size Standard_B1ms --nsg "" --plan-name centos-8-5-free --plan-product centos-8-5-free --plan-publisher eurolinuxspzoo1620639373013
+az vm auto-shutdown -g Learn_Azure -n  $component --time 1230  
+done
+
+imgDef="/subscriptions/54d1ecf0-fc36-4e9e-9f37-3f5e0b35d6a5/resourceGroups/Learn_Azure/providers/Microsoft.Compute/galleries/Master_Gallery/images/imageDef/versions/1.0.0"
+for component in payment dispatch  ; do
 az vm create --resource-group Learn_Azure --name $component  --image $imgDef --public-ip-address "" --vnet-name Centos-vm-vnet --subnet default  --admin-username centos --admin-password DevOps654321  --storage-sku Standard_LRS  --size Standard_B1ms --nsg "" --plan-name centos-8-5-free --plan-product centos-8-5-free --plan-publisher eurolinuxspzoo1620639373013
 az vm auto-shutdown -g Learn_Azure -n  $component --time 1230  
 done
